@@ -18,3 +18,8 @@ starwars %>%
 
 # extracts the row which has the largest value of a variable.
 starwars %>% slice_max(mass)
+
+#how the size of the characters differed by gender
+starwars %>% ggplot(aes(x = mass, fill = gender)) +
+  geom_density(alpha = 0.8) +
+  scale_x_log10()
